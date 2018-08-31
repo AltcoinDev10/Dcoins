@@ -54,11 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000003abec3966cee3dc993b3c9eb0e231754bcea5b1508ed329d3574c5afb09"));
+    (0, uint256("0x00000f40a77e087829b4fc2ec4f2a5c72813beb6999078607ad22ca6542b2846"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534862338, // * UNIX timestamp of last checkpoint block
+    1535746454, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -118,7 +118,7 @@ public:
 
 
 
-        const char* pszTimestamp = "I am creating dcoins today 08/21/2018";
+        const char* pszTimestamp = "I am creating dcoins today 08/31/2018";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -129,13 +129,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1534862338;
+        genesis.nTime = 1535746454;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21760977;
+        genesis.nNonce = 22016207;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000003abec3966cee3dc993b3c9eb0e231754bcea5b1508ed329d3574c5afb09"));
-        assert(genesis.hashMerkleRoot == uint256("0x1b6d1d74ab068d3732cbf60d9068b864fb93d68b190f204f78ab192aaf51a1f2"));
+        assert(hashGenesisBlock == uint256("0x00000f40a77e087829b4fc2ec4f2a5c72813beb6999078607ad22ca6542b2846"));
+        assert(genesis.hashMerkleRoot == uint256("0xa4d283516960a6ae59b1d0ddbaf6564b6226a586ebdf57e548f3f3f9bba8964b"));
 
         // DNS Seeding
         //vSeeds.push_back(CDNSSeedData("", ""));
